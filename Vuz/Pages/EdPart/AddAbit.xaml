@@ -1,0 +1,330 @@
+﻿<Page x:Class="Vuz.Pages.EdPart.AddAbit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Vuz.Pages.EdPart"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddAbit">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Right">
+            <Button Name="btnBack"                        
+                    Width="125"
+                    Height="30"
+                    Margin="0,10,10,0"
+                    Content="Назад"
+                    Click="btnBack_Click"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Top">
+            <TextBlock Text="Добавление студента"
+                       VerticalAlignment="Center"
+                       FontSize="26"/>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1"
+                    Margin="20,0,0,0">
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        >
+                <TextBlock Text="Введите фамилию"
+                           Height="20"
+                           />
+                <TextBox Height="30"
+                         Width="200"
+                         Name="Familia"
+                         Text="{Binding Familia}"
+                         />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+            VerticalAlignment="Top"
+            Width="200"
+            Margin="0,10,0,0"
+            HorizontalAlignment="Left"
+            >
+
+                <TextBlock Text="Введите имя"
+                           Height="20"
+                           
+               />
+
+                <TextBox Height="30"
+                         Width="200"
+                         Name="Imya"
+                         Text="{Binding Imya}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+            VerticalAlignment="Top"
+            Width="200"
+            Margin="0,10,0,0"
+            HorizontalAlignment="Left"
+            >
+                <TextBlock Text="Введите отчество"
+                           Height="20"
+               />
+                <TextBox Height="30"
+                         Width="200"
+                         Name="Otch"
+                         Text="{Binding Otch}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        Width="200"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Left"
+                        >
+                <TextBlock Text="Дата рождения"
+                           Height="20"
+                           />
+
+                <TextBox Height="30"
+                         Width="200"
+                         Name="BirthDate"
+                         Text="{Binding BirthDate}"/>
+
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        Width="200"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Left">
+
+                <TextBlock Text="Гражданство"
+                           Height="20"/>
+
+                <TextBox Height="30" 
+                         Width="200"
+                         Name="Nationality"
+                         Text="{Binding Nationality}"
+                         />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Vertical"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    >
+            <StackPanel Orientation="Vertical"/>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="0,0,0,0"/>
+
+            <TextBlock Text="Введите место рождения"
+            Height="20"
+            />
+            <TextBox Height="30" 
+                         Width="200"
+                         Name="BirthPlace"
+                         Text="{Binding BirthPlace}"
+                         />
+            <TextBlock Text="Введите адрес постоянной регистрации"
+            Height="20"
+            />
+            <TextBox     Height="30" 
+                         Width="200"
+                         Margin="0 10 0 0"
+                         Name="RegistrationtAddress"
+                         Text="{Binding RegistrationtAddress}"
+                         />
+            <TextBlock Text="Введите адрес проживания"
+                        Height="20"
+            />
+            <TextBox     Height="30" 
+                         Width="200"
+                         Margin="0 10 0 0"
+                         Name="ActualAddress"
+                         Text="{Binding ActualAddress}"
+                         />
+            <TextBlock Text="Введите образования до поступления в колледж"
+                        Height="20"
+            />
+            <TextBox     Height="30" 
+                         Width="200"
+                         Margin="0 10 0 0"
+                         Name="Education"
+                         Text="{Binding Education}"
+                         />
+            <TextBlock Text="Название группы"
+                           Height="20"
+                           />
+
+            <TextBox Height="30"
+                     HorizontalAlignment="Left"
+                     Margin="30 0 0 0"
+                         Width="50"
+                         Name="Group"
+                         Text="{Binding GroupName}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Margin="0 0 0 0"
+                    Orientation="Vertical"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    >
+            <StackPanel Orientation="Vertical"/>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="0,0,0,0"/>
+
+            <TextBlock Text="  "
+            Height="20"
+            />
+            <TextBox Height="30" 
+                         Width="200"
+                         Name="FatherFio"
+                         Visibility="Collapsed"
+                         Text="{Binding FatherFio}"
+                         />
+            <TextBlock Text=""
+            Height="20"
+            />
+            <TextBox     Height="30" 
+                         Width="200"
+                         Margin="0 10 0 0"
+                         Name="FatherJobPlace"
+                         Visibility="Collapsed"
+                         Text="{Binding FatherJobPlace}"
+                         />
+            <TextBlock Text="  "
+                        Height="20"
+            />
+            <TextBox     Height="30" 
+                         Width="200"
+                         Margin="0 10 0 0"
+                         Visibility="Collapsed"
+                         Name="FatherJobPosition"
+                         Text="{Binding FatherJobPosition}"
+                         />
+            <TextBlock Text="   "
+                        Height="20"
+            />
+            <TextBox     Height="30" 
+                         Width="200"
+                         Margin="0 10 0 0"
+                         Name="FatherTelepthone"
+                         Visibility="Collapsed"
+                         Text="{Binding FatherTelepthone}"
+                         />
+            <TextBox     Height="30" 
+                         Width="200"
+                         Margin="0 10 0 0"
+                         Name="FatherAdress"
+                         Visibility="Collapsed"
+                         Text="{Binding FatherAdress}"
+                         />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+             Margin="0 0 0 0"
+             Orientation="Vertical"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Right"
+             >
+            <StackPanel Orientation="Vertical"/>
+
+            <StackPanel Orientation="Vertical"
+                 Margin="0,0,0,0"/>
+
+            <TextBlock Text="  "
+                       Visibility="Collapsed"
+                       Height="20"
+                       />
+            <TextBox Height="30" 
+                  Width="200"
+                  Name="MotherFio"
+                  Visibility="Collapsed"
+                  Text="{Binding MotherFio}"
+                  />
+            <TextBlock Text=""
+                       Visibility="Collapsed"
+                       Height="20"
+                       />
+            <TextBox Height="30" 
+                     Width="200"
+                     Margin="0 10 0 0"
+                     Name="MotherJobPlace"
+                     Visibility="Collapsed"
+                     Text="{Binding MotherJobPlace}"
+                     />
+            <TextBlock Text="  "
+                       Height="20"
+                       Visibility="Collapsed"
+                       />
+            <TextBox Height="30" 
+                  Width="200"
+                  Margin="0 10 0 0"
+                  Visibility="Collapsed"
+                  Name="MotherJobPosition"
+                  Text="{Binding MotherJobPosition}"
+                  />
+            <TextBlock Text=""
+                       Visibility="Collapsed"
+                       Height="20"
+                       />
+            <TextBox     Height="30" 
+                  Width="200"
+                  Margin="0 10 0 0"
+                  Name="MotherTelepthone"
+                  Visibility="Collapsed"
+                  Text="{Binding MotherTelephone}"
+                  />
+            <TextBox     Height="30" 
+                  Width="200"
+                  Margin="0 10 0 0"
+                  Name="MotherAdress"
+                  Visibility="Collapsed"
+                  Text="{Binding MotherAdress}"
+                  />
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+             Margin="0 0 0 0"
+             Orientation="Vertical"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Right">
+
+            <TextBox  Height="30" 
+                      Width="200"
+                      Margin="0 20 0 0"
+                      Name="Gender"
+                      Text="{Binding GenderName}"
+      />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Height="30"
+                    HorizontalAlignment="Center"
+                    >
+            <Button Width="180"
+                    HorizontalAlignment="Center"
+
+                    Height="30"
+                    Name="btnSubmit"
+                    Click="btnSubmit_Click"
+                    Content="Добавить студента в группу"/>
+
+
+
+        </StackPanel>
+    </Grid>
+</Page>
