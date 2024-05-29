@@ -13,7 +13,14 @@
             <RowDefinition Height="85"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Left"
+            Orientation="Horizontal"
+            VerticalAlignment="Top"
+            Margin="10 10 0 0">
+            <Image Source="D:\Vuz\Vuz\Image\netk_0.png"
+           Width="88" Height="61"/>
 
+        </StackPanel>
         <StackPanel HorizontalAlignment="Center"                     
             Orientation="Horizontal" Margin="301,0">
             <TextBlock Text="Авторизация" 
