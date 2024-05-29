@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Vuz.AppServices;
 using Vuz.Data;
 using Vuz.Pages.Department;
+using Vuz.Pages.EdPart;
 
 namespace Vuz.Pages
 {
@@ -63,6 +64,14 @@ namespace Vuz.Pages
                                             MessageBoxImage.Information);
                             FrameApp.frmObj.Navigate(new MenuPage());
                             break;
+                        case 3:
+                            MessageBox.Show("Добро пожаловать! ",
+                                            "Успешный вход",
+                                            MessageBoxButton.OK,
+                                            MessageBoxImage.Information);
+                            FrameApp.frmObj.Navigate(new EdMenuPage());
+                            break;
+
                     }
                 }
             }

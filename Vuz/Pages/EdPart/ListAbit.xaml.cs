@@ -107,8 +107,8 @@ namespace Vuz.Pages.EdPart
         {
             try
             {
-                DgrStudent.ItemsSource = DbConnect.entObj.Students.Where(x => x.FIO.Contains(TxbSearch.Text)).ToList();
-                ResultTxb.Text = DgrStudent.Items.Count + "/" + DbConnect.entObj.Students.Where(x => x.FIO.Contains(TxbSearch.Text)).Count().ToString();
+                DgrStudent.ItemsSource = DbConnect.entObj.Abiturient.Where(x => x.FIO.Contains(TxbSearch.Text)).ToList();
+                ResultTxb.Text = DgrStudent.Items.Count + "/" + DbConnect.entObj.Abiturient.Where(x => x.FIO.Contains(TxbSearch.Text)).Count().ToString();
             }
             catch (Exception ex)
             {
@@ -127,9 +127,9 @@ namespace Vuz.Pages.EdPart
                 CmbSort.SelectedIndex = 0;
                 CmbFilter.SelectedIndex = 0;
 
-                DgrStudent.ItemsSource = DbConnect.entObj.Students.ToList();
+                DgrStudent.ItemsSource = DbConnect.entObj.Abiturient.ToList();
 
-                ResultTxb.Text = DgrStudent.Items.Count + "/" + DbConnect.entObj.Students.Count().ToString();
+                ResultTxb.Text = DgrStudent.Items.Count + "/" + DbConnect.entObj.Abiturient.Count().ToString();
             }
             catch (Exception except)
             {

@@ -34,7 +34,7 @@ namespace Vuz.Pages.EdPart
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-             if (DbConnect.entObj.Students.Count(x => x.FIO == Familia.Text) > 0)
+            if (DbConnect.entObj.Students.Count(x => x.FIO == Familia.Text) > 0)
             {
                 System.Windows.MessageBox.Show("Такой студент уже есть!",
                     "Уведомление",
@@ -58,26 +58,27 @@ namespace Vuz.Pages.EdPart
 
                         Students StudentObj = new Students()
                         {
-                          Familia = Familia.Text,
-                          Imya = Imya.Text,
-                          Otch = Otch.Text,
-                          GenderId = Gender.Text,
-                          Nationality = Nationality.Text,
-                          BirthDate = Convert.ToDateTime(BirthDate.Text),
-                          BirthPlace = BirthPlace.Text,
-                          RegistrationtAddress = RegistrationtAddress.Text,
-                          ActualAddress = ActualAddress.Text,
-                          Education = Education.Text,
-                          FatherFio = FatherFio.Text,
-                          FatherJobPlace = FatherJobPosition.Text,
-                          FatherJobPosition = FatherJobPosition.Text,
-                          MotherFio = MotherFio.Text,
-                          MotherJobPlace = MotherJobPosition.Text,
-                          MotherJobPosition = MotherJobPosition.Text,
-                          FatherTelepthone = FatherTelepthone.Text,
-                          MotherTelephone = MotherTelepthone.Text,
-                          MotherAdress = MotherAdress.Text,
-                          FatherAdress = FatherAdress.Text
+                            Familia = Familia.Text,
+                            Imya = Imya.Text,
+                            Otch = Otch.Text,
+                            FIO = FIO.Text,
+                            GenderId = Gender.Text,
+                            Nationality = Nationality.Text,
+                            BirthDate = Convert.ToDateTime(BirthDate.Text),
+                            BirthPlace = BirthPlace.Text,
+                            RegistrationtAddress = RegistrationtAddress.Text,
+                            ActualAddress = ActualAddress.Text,
+                            Education = Education.Text,
+                            FatherFio = FatherFio.Text,
+                            FatherJobPlace = FatherJobPosition.Text,
+                            FatherJobPosition = FatherJobPosition.Text,
+                            MotherFio = MotherFio.Text,
+                            MotherJobPlace = MotherJobPosition.Text,
+                            MotherJobPosition = MotherJobPosition.Text,
+                            FatherTelepthone = FatherTelepthone.Text,
+                            MotherTelephone = MotherTelepthone.Text,
+                            MotherAdress = MotherAdress.Text,
+                            FatherAdress = FatherAdress.Text
 
 
                         };
@@ -85,21 +86,22 @@ namespace Vuz.Pages.EdPart
                         DbConnect.entObj.Students.Add(StudentObj);
                         DbConnect.entObj.SaveChanges();
 
-                        System.Windows.MessageBox.Show("Студент добавлен в группу!",
+                        System.Windows.MessageBox.Show("Абитуриент переведен",
                             "Уведомление",
                             MessageBoxButton.OK,
                             MessageBoxImage.Information);
                     }
                     catch (Exception ex)
                     {
-                        System.Windows.MessageBox.Show("Ошибка добавления студента: " + ex.Message.ToString(),
+                        System.Windows.MessageBox.Show("Ошибка: " + ex.Message.ToString(),
                         "Критический сбой работы приложения",
                         MessageBoxButton.OK,
                         MessageBoxImage.Warning);
                     }
                 }
             }
-        }
+        
+    }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
