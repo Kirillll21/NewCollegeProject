@@ -300,6 +300,17 @@
                   Name="MotherJobPosition"
                   Text="{Binding MotherJobPosition}"
                   />
+        
+
+            <TextBlock Text="Телефон матери"
+                       Height="20"/>
+            <TextBox Height="30" 
+                     Width="200"
+                     Margin="0 0 0 0"
+                     Name="MotherTelepthone"
+                     Visibility="Visible"
+                     Text="{Binding MotherTelephone}"
+                     />
             <TextBlock Text="Адрес проживания матери"
                        Visibility="Visible"
                        Height="20"
@@ -311,18 +322,7 @@
                      Visibility="Visible"
                      Text="{Binding MotherAdress}"
                           
-                     />            
-
-            <TextBlock Text="Телефон матери"
-                       Height="20"/>
-            <TextBox Height="30" 
-                     Width="200"
-                     Margin="0 0 0 0"
-                     Name="MotherTelepthone"
-                     Visibility="Visible"
-                     Text="{Binding MotherTelephone}"
-                     />    
-
+                     />
         </StackPanel>
 
 
