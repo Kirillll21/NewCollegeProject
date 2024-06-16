@@ -129,17 +129,7 @@
                         VerticalAlignment="Top"
                         Width="200"
                         Margin="0,10,0,0"
-                        HorizontalAlignment="Left">
-
-                <TextBlock Text="Пол"
-                           Height="20"/>
-
-                <TextBox Height="30" 
-                         Width="200"
-                         Name="FIO"
-                         Text="{Binding GenderName}"
-                         />
-            </StackPanel>
+                        HorizontalAlignment="Left"/>
 
             <StackPanel Orientation="Vertical"
             VerticalAlignment="Top"
