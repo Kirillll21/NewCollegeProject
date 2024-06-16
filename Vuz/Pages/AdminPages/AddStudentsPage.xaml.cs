@@ -642,7 +642,7 @@ namespace Vuz.Pages.AdminPages
                  .SetFont(TNR)
                  .SetFontColor(new DeviceRgb(0, 0, 0));
 
-            doc.Add(new iText.Layout.Element.Paragraph("Зачислен(а) на __1__ курс, группа №" +Group.Text + "    Приказ № ___184__ от __25.08.2020__").AddStyle(style)); // Здесь должна быть переменная с группой и датой зачисления !!!!!!!!!!!
+            doc.Add(new iText.Layout.Element.Paragraph("Зачислен(а) на __1__ курс, группа №" +Group.Text + "    Приказ № _____ от ____").AddStyle(style)); // Здесь должна быть переменная с группой и датой зачисления !!!!!!!!!!!
             doc.Add(new iText.Layout.Element.Paragraph("1. ОБЩИЕ СВЕДЕНИЯ").AddStyle(style2));
 
             generalinfoTable.AddCell(geninf11);
@@ -730,6 +730,7 @@ namespace Vuz.Pages.AdminPages
                .SetPaddingTop(0)
                .SetFontSize(10)
                .SetHeight(15)
+               .SetMinWidth(150)
                .Add(new iText.Layout.Element.Paragraph(FatherFio.Text));
 
             Cell parentstb7 = new Cell(1, 1)
@@ -783,12 +784,13 @@ namespace Vuz.Pages.AdminPages
                .SetFont(TNR)
                .SetPaddingTop(0)
                .SetFontSize(8)
-
+               .SetMinWidth(150)
                .Add(new iText.Layout.Element.Paragraph(MotherAdress.Text + "Тел.:" + MotherTelepthone.Text));
             Cell parentstb15 = new Cell(1, 1)
                .SetFont(TNR)
                .SetPaddingTop(0)
-               .SetFontSize(8)               
+               .SetFontSize(8)
+               .SetMinWidth(150)
                .Add(new iText.Layout.Element.Paragraph(FatherAdress.Text + "Тел.:" + FatherTelepthone.Text ));
 
             Cell parentstb16 = new Cell(1, 1)
@@ -802,13 +804,14 @@ namespace Vuz.Pages.AdminPages
                .SetPaddingTop(0)
                .SetFontSize(10)
                .SetHeight(15)
-
+               .SetMinWidth(150)
                .Add(new iText.Layout.Element.Paragraph(MotherJobPlace.Text));
             Cell parentstb18 = new Cell(1, 1)
                .SetFont(TNR)
                .SetPaddingTop(0)
                .SetFontSize(10)
                .SetHeight(15)
+               .SetMinWidth(150)
                .Add(new iText.Layout.Element.Paragraph(FatherJobPlace.Text));
 
             Cell parentstb19 = new Cell(1, 1)
@@ -822,12 +825,14 @@ namespace Vuz.Pages.AdminPages
                .SetPaddingTop(0)
                .SetFontSize(10)
                .SetHeight(15)
+               .SetMinWidth(150)
                .Add(new iText.Layout.Element.Paragraph(MotherJobPosition.Text)); // переменная с данными через + {doljnosttextbox.Text}
             Cell parentstb21 = new Cell(1, 1)
                .SetFont(TNR)
                .SetPaddingTop(0)
                .SetFontSize(10)
                .SetHeight(15)
+               .SetMinWidth(150)
                .Add(new iText.Layout.Element.Paragraph(FatherJobPosition.Text));
 
                        
