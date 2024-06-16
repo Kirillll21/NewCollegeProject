@@ -55,13 +55,14 @@ namespace Vuz.Pages.EdPart
                 {
                     try
                     {
+                        var FIO = Familia.Text + " " + Imya.Text + " " + Otch.Text;
 
                         Students StudentObj = new Students()
                         {
                             Familia = Familia.Text,
                             Imya = Imya.Text,
                             Otch = Otch.Text,
-                            FIO = FIO.Text,
+                            FIO = FIO,
                             GenderId = Gender.Text,
                             Nationality = Nationality.Text,
                             BirthDate = Convert.ToDateTime(BirthDate.Text),

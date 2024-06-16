@@ -131,13 +131,13 @@
                         Margin="0,10,0,0"
                         HorizontalAlignment="Left">
 
-                <TextBlock Text="Полное ФИО"
+                <TextBlock Text="Пол"
                            Height="20"/>
 
                 <TextBox Height="30" 
                          Width="200"
                          Name="FIO"
-                         Text="{Binding FIO}"
+                         Text="{Binding GenderName}"
                          />
             </StackPanel>
         </StackPanel>

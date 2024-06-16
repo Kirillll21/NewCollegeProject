@@ -126,20 +126,26 @@
             </StackPanel>
             
             <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        Width="200"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Left">
+
+                <TextBlock Text="Пол"
+                           Height="20"/>
+
+                <TextBox Height="30" 
+                         Width="200"
+                         Name="FIO"
+                         Text="{Binding GenderName}"
+                         />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
             VerticalAlignment="Top"
             Width="200"
             Margin="0,10,0,0"
-            HorizontalAlignment="Left">
-
-                <TextBlock Text="Полное ФИО"
-               Height="20"/>
-
-                <TextBox Height="29" 
-             Width="200"
-             Name="FIOAbit"
-             Text="{Binding FIO}"
-             />
-            </StackPanel>
+            HorizontalAlignment="Left"/>
         </StackPanel>
 
         <StackPanel
