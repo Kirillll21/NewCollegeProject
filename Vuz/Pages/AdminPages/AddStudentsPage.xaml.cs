@@ -49,7 +49,10 @@ namespace Vuz.Pages.AdminPages
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-           /* if (DbConnect.entObj.Students.Count(x => x.FIO == txbFio.Text) > 0)
+
+            var fio = Familia.Text + Imya.Text + Otch.Text;
+
+            if (DbConnect.entObj.Students.Count(x => x.FIO == fio) > 0)
             {
                 System.Windows.MessageBox.Show("Такой студент уже есть!",
                     "Уведомление",
@@ -59,28 +62,35 @@ namespace Vuz.Pages.AdminPages
             }
             else
             {
-                if (txbFio.Text == null | txbFio.Text.Trim() == "" | txbAge.Text == null | txbAge.Text.Trim() == "" | txbStipendSize.Text == null | txbStipendSize.Text.Trim() == "" | txbStipendReason.Text == null | txbStipendReason.Text.Trim() == "" | txbCountChildren.Text == null | txbCountChildren.Text.Trim() == "")
-                {
-                    System.Windows.MessageBox.Show("Заполните все поля!",
-                    "Уведомление",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Information);
-                }
-                else
-                {
+
+                
                     try
                     {
 
-                        Students StudentObj = new Students()
-                        {
-                            FIO = txbFio.Text,
-                            Age = Int32.Parse(txbAge.Text),
-                            Children = Int32.Parse(txbCountChildren.Text),
-                            StipendSize = Int32.Parse(txbStipendSize.Text),
-                            StipendReason = txbStipendReason.Text,
-                            GroupId = Int32.Parse(CmbFilterGroup.Text),
-                            GenderId = CmbFilterGender.Text
-
+                    Students StudentObj = new Students()
+                    {
+                        Familia = Familia.Text,
+                        Imya = Imya.Text,
+                        Otch = Otch.Text,
+                        FIO = fio,
+                        GroupName = Group.Text,
+                        GenderId = Gender.Text,
+                        Nationality = TxbNationality.Text,
+                        BirthDate = Convert.ToDateTime(BirthDate.Text),
+                        BirthPlace = BirthPlace.Text,
+                        RegistrationtAddress = RegistrationtAddress.Text,
+                        ActualAddress = ActualAddress.Text,
+                        Education = Education.Text,
+                        FatherFio = FatherFio.Text,
+                        FatherAdress = FatherAdress.Text,
+                        FatherJobPlace = FatherJobPlace.Text,
+                        FatherJobPosition = FatherJobPosition.Text,
+                        FatherTelepthone = FatherTelepthone.Text,
+                        MotherAdress = MotherAdress.Text,
+                        MotherFio = MotherFio.Text,
+                        MotherJobPlace = MotherJobPlace.Text,
+                        MotherJobPosition = MotherJobPosition.Text,
+                        MotherTelephone = MotherTelepthone.Text
                         };
 
                         DbConnect.entObj.Students.Add(StudentObj);
@@ -98,8 +108,8 @@ namespace Vuz.Pages.AdminPages
                         MessageBoxButton.OK,
                         MessageBoxImage.Warning);
                     }
-                }
-            }*/
+                
+            }
         }
 
         private void CmbFilterGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -412,7 +422,7 @@ namespace Vuz.Pages.AdminPages
                 .SetBorderBottom(null)
                 .SetFont(TNR)
                 .SetFontSize(12)
-                .Add(new iText.Layout.Element.Paragraph("Гражданство – " + Nationality.Text));
+                .Add(new iText.Layout.Element.Paragraph("Гражданство – " + TxbNationality.Text));
 
             Cell geninf19 = new Cell(1, 1)
                 .SetBorder(null)

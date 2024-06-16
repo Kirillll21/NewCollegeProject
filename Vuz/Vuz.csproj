@@ -216,6 +216,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Vuz.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AdminPages\MainAdminMenu.xaml.cs">
+      <DependentUpon>MainAdminMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EdPart\EdMenuPage.xaml.cs">
       <DependentUpon>EdMenuPage.xaml</DependentUpon>
     </Compile>
@@ -255,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AdminPages\AdminMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdminPages\MainAdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

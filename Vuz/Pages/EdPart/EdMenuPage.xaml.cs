@@ -34,7 +34,7 @@ namespace Vuz.Pages.EdPart
 
         private void AddAbit_Click(object sender, RoutedEventArgs e)
         {
-            FrameApp.frmObj.Navigate(new AddAbit(null));
+            FrameApp.frmObj.Navigate(new AnketaAbiturienta());
         }
 
         private void btnGoStudentView_Click(object sender, RoutedEventArgs e)
@@ -47,6 +47,11 @@ namespace Vuz.Pages.EdPart
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frmObj.GoBack();
+        }
+
+        private void TransAbit_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new AddAbit(null));
         }
     }
 }

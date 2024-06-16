@@ -60,14 +60,23 @@
             </StackPanel>
             <StackPanel Orientation="Vertical"
                     VerticalAlignment="Center"
-                    Margin="10,-80,0,0">
+                    Margin="10,-80,0,0" Height="212">
                 <Button Width="180"
-                    Height="50"
-                    x:Name="AddAbit"
-                    Click="AddAbit_Click"
-                    Content="Добавить абитуриента"
-                    FontSize="16"
+                        Height="50"
+                        x:Name="AddAbit"
+                        Click="AddAbit_Click"
+                        Content="Добавить абитуриента"
+                        FontSize="16"
+                            Margin="0 80 0 0"
             />
+                <Button Width="180"
+                         Height="50"
+                         x:Name="TransAbit"
+                         Click="TransAbit_Click"
+                         Content="Перевести абитуриента"
+                         FontSize="16"
+                         Margin="0 30 0 0"
+                 />
             </StackPanel>
         </StackPanel>
     </Grid>

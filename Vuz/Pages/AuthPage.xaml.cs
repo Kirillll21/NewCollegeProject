@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Vuz.AppServices;
 using Vuz.Data;
+using Vuz.Pages.AdminPages;
 using Vuz.Pages.Department;
 using Vuz.Pages.EdPart;
 
@@ -62,7 +63,7 @@ namespace Vuz.Pages
                                             "Успешный вход",
                                             MessageBoxButton.OK,
                                             MessageBoxImage.Information);
-                            FrameApp.frmObj.Navigate(new MenuPage());
+                            FrameApp.frmObj.Navigate(new MainAdminMenu());
                             break;
                         case 3:
                             MessageBox.Show("Добро пожаловать! ",

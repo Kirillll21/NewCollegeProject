@@ -48,14 +48,6 @@
                     Content="Студенты"
                     FontSize="16"
             />
-                <Button Width="180"
-                    Height="50"
-                    Name="btnUsers"
-                    Click="btnUsers_Click"
-                    Content="Пользователи"
-                    Margin="0,30,0,0"
-                    FontSize="16"
-            />
 
             </StackPanel>
             <StackPanel Orientation="Vertical"
@@ -69,14 +61,6 @@
                         Content="Добавить студента"
                         FontSize="16"                        
                         />
-                <Button Width="180"
-                        Height="50"
-                        Name="btnAddUser"
-                        Click="btnAddUser_Click"
-                        Content="Добавить пользователя"
-                        Margin="0,30,0,0"
-                        FontSize="16"
-                />
             </StackPanel>
         </StackPanel>
     </Grid>

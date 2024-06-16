@@ -145,11 +145,7 @@ namespace Vuz.Pages.AdminPages.AdminListPages
 
         private void DgrStudent_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            if (Visibility == Visibility.Visible)
-            {
-                DbConnect.entObj.ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
-                DgrStudent.ItemsSource = DbConnect.entObj.Students.ToList();
-            }
+            
         }
     }
 }
