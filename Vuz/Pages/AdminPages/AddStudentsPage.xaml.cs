@@ -140,7 +140,7 @@ namespace Vuz.Pages.AdminPages
 
         private void btnCreateCard_Click(object sender, RoutedEventArgs e)
         {
-            var dest = "d:\\demo.pdf";
+            var dest = "d:\\StudentCard.pdf";
             var file = new FileInfo(dest);
             file.Directory?.Create();
 
