@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,10 +27,14 @@ namespace Vuz.Pages.EdPart
         public AddAbit(Abiturient aAbiturient)
         {
             InitializeComponent();
+
+            
+
             if (aAbiturient != null)
                 AbitObj = aAbiturient;
 
             DataContext = AbitObj;
+            
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -55,7 +60,9 @@ namespace Vuz.Pages.EdPart
                 {
                     try
                     {
+                        DateTime dt = DateTime.ParseExact(BirthDate.Text, "dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
                         var FIO = Familia.Text + " " + Imya.Text + " " + Otch.Text;
+                        
 
                         Students StudentObj = new Students()
                         {
@@ -65,7 +72,7 @@ namespace Vuz.Pages.EdPart
                             FIO = FIO,
                             GenderId = Gender.Text,
                             Nationality = Nationality.Text,
-                            BirthDate = Convert.ToDateTime(BirthDate.Text),
+                            BirthDate = Convert.ToDateTime(Regex.Replace(BirthDate.Text, "\u200e", string.Empty)),
                             BirthPlace = BirthPlace.Text,
                             RegistrationtAddress = RegistrationtAddress.Text,
                             ActualAddress = ActualAddress.Text,

@@ -50,7 +50,8 @@ namespace Vuz.Pages.AdminPages
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
 
-            var fio = Familia.Text + Imya.Text + Otch.Text;
+            var fio = Familia.Text + " " + Imya.Text + " " + Otch.Text;
+            DateTime dt = DateTime.ParseExact(BirthDate.Text, "dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
 
             if (DbConnect.entObj.Students.Count(x => x.FIO == fio) > 0)
             {
@@ -62,9 +63,9 @@ namespace Vuz.Pages.AdminPages
             }
             else
             {
-
                 
-                    try
+
+                try
                     {
 
                     Students StudentObj = new Students()
@@ -76,7 +77,7 @@ namespace Vuz.Pages.AdminPages
                         GroupName = Group.Text,
                         GenderId = Gender.Text,
                         Nationality = TxbNationality.Text,
-                        BirthDate = Convert.ToDateTime(BirthDate.Text),
+                        BirthDate = dt,
                         BirthPlace = BirthPlace.Text,
                         RegistrationtAddress = RegistrationtAddress.Text,
                         ActualAddress = ActualAddress.Text,
